@@ -1,0 +1,94 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Wed Dec 18 11:39:17 2019
+| Host         : 612-42 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    27 |
+| Unused register locations in slices containing registers |    15 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      3 |            1 |
+|      4 |            1 |
+|      8 |            3 |
+|    16+ |           22 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              83 |           38 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |             109 |           29 |
+| Yes          | No                    | No                     |             281 |          136 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              32 |           10 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------------+---------------------------------------------+---------------------+------------------+----------------+
+|      Clock Signal      |                Enable Signal                |   Set/Reset Signal  | Slice Load Count | Bel Load Count |
++------------------------+---------------------------------------------+---------------------+------------------+----------------+
+|  f1/clk1               |                                             |                     |                2 |              3 |
+|  clk_IBUF_BUFG         | f0/FSM_sequential_current_state_reg[1]_1[0] |                     |                2 |              4 |
+|  f0/scan_cnt_reg[2][0] |                                             | f0/isinput_reg_2[0] |                2 |              8 |
+|  f15/div_clk           |                                             |                     |                2 |              8 |
+|  f4/E[0]               |                                             | f0/AR[0]            |                3 |              8 |
+|  clk_IBUF_BUFG         | f0/E[0]                                     |                     |                7 |             16 |
+|  clk_IBUF_BUFG         | f0/putin_num_reg[4][0]                      |                     |                5 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_1[0]                  |                     |                8 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[0]_1[0]                  |                     |                8 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[0]_3[0]                  |                     |                7 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1][0]                    |                     |                9 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_4[0]                  |                     |                9 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_3[0]                  |                     |                8 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[0][0]                    |                     |                8 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[0]_0[0]                  |                     |                8 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_6[0]                  |                     |                9 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_7[0]                  |                     |                7 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_0[0]                  |                     |                7 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_5[0]                  |                     |               10 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[0]_2[0]                  |                     |                8 |             16 |
+|  clk_IBUF_BUFG         | f0/takeout_num_reg[1]_2[0]                  |                     |               10 |             16 |
+|  clk_IBUF_BUFG         | f0/FSM_sequential_current_state_reg[1]_4[0] |                     |                6 |             21 |
+|  clk_IBUF_BUFG         |                                             | f22/clk2_0          |                8 |             31 |
+|  clk_IBUF_BUFG         |                                             | f15/div_clk_0       |                8 |             31 |
+|  clk_IBUF_BUFG         |                                             | f1/clk11            |                8 |             31 |
+|  clk_IBUF_BUFG         | f0/isinput_reg_0[0]                         | f0/AR[0]            |               10 |             32 |
+|  clk_IBUF_BUFG         |                                             |                     |               34 |             72 |
++------------------------+---------------------------------------------+---------------------+------------------+----------------+
+
+
